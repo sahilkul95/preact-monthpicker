@@ -82,18 +82,11 @@ class MonthYearPicker extends Component {
   }
 
   renderMonths() {
-    this.renderMonth(1);
-    this.renderMonth(2);
-    this.renderMonth(3);
-    this.renderMonth(4);
-    this.renderMonth(5);
-    this.renderMonth(6);
-    this.renderMonth(7);
-    this.renderMonth(8);
-    this.renderMonth(9);
-    this.renderMonth(10);
-    this.renderMonth(11);
-    this.renderMonth(12);
+    let monthsToRender = [];
+    for (let i = 1; i <= 12; i++) {
+      monthsToRender.push(this.renderMonth(i));
+    }
+    return monthsToRender;
   }
 
   render() {
@@ -105,7 +98,7 @@ class MonthYearPicker extends Component {
         createElement('div', {style: 'display: inline-block;'}, this.renderRightArrowButton())
       ),
       createElement('div', {className: 'month-picker'},
-        createElement('div', {}, this.renderMonths(1))
+        createElement('div', {}, this.renderMonths())
       )
     );
   }
