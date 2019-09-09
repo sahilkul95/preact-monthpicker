@@ -1,6 +1,6 @@
 {
   "name": "preact-monthpicker",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A dynamic month-year picker component for use in Preact/React application",
   "main": "dist/index.js",
   "scripts": {
