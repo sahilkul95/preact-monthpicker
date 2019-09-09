@@ -6,6 +6,7 @@ class MonthYearPicker extends Component {
     super(props);
     this.handleOnClickLeftArrow = this.handleOnClickLeftArrow.bind(this);
     this.handleOnClickRightArrow = this.handleOnClickRightArrow.bind(this);
+    if (!props.caption) props.caption = 'Select month and year';
   }
 
   handleOnClickLeftArrow() {
@@ -109,9 +110,5 @@ class MonthYearPicker extends Component {
     );
   }
 }
-
-MonthYearPicker.defaultProps = {
-  caption: 'Select month and year'
-};
 
 export default MonthYearPicker;

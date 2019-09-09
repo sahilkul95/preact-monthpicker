@@ -54,9 +54,10 @@ Properties used to customise the rendering:
 
 | Name | Type | Description |
 |:---- | ---- | ------ |
-| selectedMonth | Number*`(required)`* | Month to be highlighted (preselected when component is loaded onto page) |
-| selectedYear | Number*`(required)`* | Year to be highlighted (preselected when component is loaded onto page)
-| minYear | Number*`(required)`* | Starting year in picker range
-| maxYear | Number*`(required)`* | Ending year in picker range
-| onChangeYear | Function*`(required)`* | Callback function to be called when user changes selected year
-| onChangeMonth | Function*`(required)`* | Callback function to be called when user changes month
+| selectedMonth | Number`(required)` | Month to be highlighted (preselected when component is loaded onto page) |
+| selectedYear | Number`(required)` | Year to be highlighted (preselected when component is loaded onto page)
+| minYear | Number`(required)` | Starting year in picker range
+| maxYear | Number`(required)` | Ending year in picker range
+| onChangeYear | Function`(required)` | Callback function to be called when user changes selected year
+| onChangeMonth | Function`(required)` | Callback function to be called when user changes month
+| caption | String | Label to display in front of picker
