@@ -6,7 +6,6 @@ class MonthYearPicker extends Component {
     super(props);
     this.handleOnClickLeftArrow = this.handleOnClickLeftArrow.bind(this);
     this.handleOnClickRightArrow = this.handleOnClickRightArrow.bind(this);
-    if (!props.caption) props.caption = 'Select month and year';
   }
 
   handleOnClickLeftArrow() {
@@ -69,16 +68,16 @@ class MonthYearPicker extends Component {
 
   renderLeftArrowButton() {
     if (this.props.selectedYear === this.props.minYear) {
-      return createElement('em', {className: 'arrow-icon icon icon-angle-left disabled'}, '<');
+      return createElement('em', {className: 'arrow-icon disabled'}, '<');
     }
-    return createElement('em', {role: 'button', tabIndex: 0, onClick: this.handleOnClickLeftArrow.bind(this), className: 'arrow-icon icon icon-angle-left'}, '<');
+    return createElement('em', {role: 'button', tabIndex: 0, onClick: this.handleOnClickLeftArrow.bind(this), className: 'arrow-icon pointer'}, '<');
   }
 
   renderRightArrowButton() {
     if (this.props.selectedYear === this.props.maxYear) {
-      return createElement('em', {className: 'arrow-icon icon icon-angle-right disabled'}, '>');
+      return createElement('em', {className: 'arrow-icon icon disabled'}, '>');
     }
-    return createElement('em', {role: 'button', tabIndex: 0, onClick: this.handleOnClickRightArrow.bind(this), className: 'arrow-icon icon icon-angle-right'}, '>');
+    return createElement('em', {role: 'button', tabIndex: 0, onClick: this.handleOnClickRightArrow.bind(this), className: 'arrow-icon pointer'}, '>');
   }
 
   renderMonths() {
@@ -91,7 +90,7 @@ class MonthYearPicker extends Component {
 
   render() {
     return createElement('div', {className: 'month-year-picker'},
-      createElement('span', {className: 'caption'}, this.props.caption),
+      createElement('span', {className: 'caption'}, this.props.caption || 'Select month and year'),
       createElement('div', {className: 'year-picker'},
         createElement('div', {style: 'display: inline-block;'}, this.renderLeftArrowButton()),
         createElement('span', {}, this.props.selectedYear),
