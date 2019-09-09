@@ -1,5 +1,5 @@
 import { Component, createElement } from 'preact';
-import './style.css';
+// import './style.css';
 
 class MonthYearPicker extends Component {
   constructor(props) {
