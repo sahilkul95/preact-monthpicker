@@ -12,7 +12,7 @@ npm install preact-monthpicker -S
 
 Code Example:
 ```jsx
-import MonthYearPicker from "preact-monthpicker";
+import {MonthYearPicker} from "preact-monthpicker";
 
 componentWillMount() {
   this.state = {

@@ -71,14 +71,14 @@ class MonthYearPicker extends Component {
     if (this.props.selectedYear === this.props.minYear) {
       return createElement('em', {className: 'arrow-icon icon icon-angle-left disabled'}, '<');
     }
-    return createElement('em', {role: 'button', tabIndex: 0, onClick: this.handleOnClickLeftArrow, className: 'arrow-icon icon icon-angle-left'}, '<');
+    return createElement('em', {role: 'button', tabIndex: 0, onClick: this.handleOnClickLeftArrow.bind(this), className: 'arrow-icon icon icon-angle-left'}, '<');
   }
 
   renderRightArrowButton() {
     if (this.props.selectedYear === this.props.maxYear) {
       return createElement('em', {className: 'arrow-icon icon icon-angle-right disabled'}, '>');
     }
-    return createElement('em', {role: 'button', tabIndex: 0, onClick: this.handleOnClickRightArrow, className: 'arrow-icon icon icon-angle-right'}, '>');
+    return createElement('em', {role: 'button', tabIndex: 0, onClick: this.handleOnClickRightArrow.bind(this), className: 'arrow-icon icon icon-angle-right'}, '>');
   }
 
   renderMonths() {
