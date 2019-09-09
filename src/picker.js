@@ -62,7 +62,7 @@ class MonthYearPicker extends Component {
         break;
     }
     let className = this.props.selectedMonth === month ? 'selected' : '';
-    return createElement('div', {className, role: 'button', tabIndex: 0, onClick: this.props.onChangeMonth(month)},
+    return createElement('div', {className, role: 'button', tabIndex: 0, onClick: this.props.onChangeMonth.bind(this, month)},
       createElement('span', {}, text)
     );
   }
